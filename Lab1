@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    int cel;
+    char mas[] = "ZDRASTE";
+    scanf("%d", &cel);
+    printf("%d", cel);
+    printf("%s", mas);
+    return 0;
+}
