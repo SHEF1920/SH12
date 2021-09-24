@@ -3,9 +3,10 @@
 int main()
 {
     int cel;
-    char mas[] = "ZDRASTE";
+    char str[1000];
+    scanf("%[^\n]s", str);
     scanf("%d", &cel);
     printf("%d", cel);
-    printf("%s", mas);
+    printf("%s", str);
     return 0;
 }
