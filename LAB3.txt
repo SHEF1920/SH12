@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main()
+{
+    int numb=0, numb_3=0, numb_5=0, sum;
+    scanf("%d", &numb);
+    printf("%x\n", numb);
+    printf("%o\n", numb);
+    printf("%o\n", numb>>3);
+    //numb_3=~numb_3;
+    printf("%o\n", ~numb);
+    scanf("%o", &numb_5);
+    //numb_5=numb_5+numb
+    printf("%o", numb | numb_5);
+    return 0;
+}
