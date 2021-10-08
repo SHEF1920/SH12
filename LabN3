@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int numb=0, numb_3=0, numb_5=0, sum;
+    scanf("%d", &numb);
+    printf("%x", numb);
+    printf("%s\n", " - Десятичная");
+    printf("%o", numb);
+    printf("%s\n", " - Восьмеричная");
+    printf("%o", numb>>3);
+    printf("%s\n", " - Восьмеричная со сдвигом на три вправо");
+    printf("%o", ~numb);
+    printf("%s\n", " - Восьмеричная");
+    scanf("%o", &numb_5);
+    printf("%o", numb | numb_5);
+    printf("%s\n", " - Восьмеричная");
+    return 0;
+}
