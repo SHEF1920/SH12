@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main()
+{
+    int numb=0, answ=0;
+    scanf("%d", &numb);
+    answ=(numb>=1000)?(numb<=10000)? numb:0:0;
+    printf("%d\n", answ);
+    printf("%d\n", (numb>>23)%2);
+    return 0;
+}
