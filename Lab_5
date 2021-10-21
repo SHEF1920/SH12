@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int n = 9, x=2, z=2;
+    int mas [n];
+    int mat1[x][z], mat2[x][z], matx[x][z];
+    for (int i = 0; i < n; ++i) {
+            scanf("%d", &mas[i]);
+    }
+    for (int i = 0; i < n; ++i) {
+            printf("%d ", mas[i]);
+    }
+    for (int i = 0; i < x; ++i) {
+        for (int j=0; j<z; j++)
+            scanf("%d", &mat1[i][j]);
+    }
+    for (int i = 0; i < x; ++i) {
+        for (int j=0; j<z; j++)
+            scanf("%d", &mat2[i][j]);
+    }
+    for (int i = 0; i < x; ++i) {
+        for (int j=0; j<z; j++)
+            matx[i][j]=mat1[i][j]*mat2[i][j];
+    }
+    for (int i = 0; i < x; ++i) {
+        for (int j=0; j<z; j++)
+            printf("%d ", matx[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
