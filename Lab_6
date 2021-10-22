@@ -1,16 +1,27 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main() {
-    float* m = (float *) malloc(4);
-    for (int i = 0; i <4; ++i)
-    {
-        scanf("%f", &m[i]);
-    }
+int main() 
+{
+    float mas[]={-8.8, 11.2, 64.67, 55.32};
+    float *elem;
+    elem=&mas[0];
+    for (int i=0; i<4; i++)
+        printf("%f\t", *(elem+i));
+    printf("\n");
+    
+    
+    float* m = (float *) malloc(4*sizeof(float));
+    //m={-8.8, 11.2, 64.67, 55.32};
+    *(m+0)=-8.8;
+    *(m+1)=11.2;
+    *(m+2)=64.67;
+    *(m+3)=55.32;
     for (int i = 0; i <4; ++i)
     {
         printf("%f\t", m[i]);
     }
     free(m);
+    
     return 0;
 }
