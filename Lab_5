@@ -1,26 +1,32 @@
 #include <stdio.h>
 
-int main() {
+int main() 
+{
     int n = 9, x=2, z=2;
     int mas [n];
-    int mat1[x][z], mat2[x][z], matx[x][z];
+    int matx[2][2];
+    int mat1[2][2]=
+    {
+        {2,5},
+        {2,2}
+    };
+    int mat2[2][2]=
+    {
+        {1,2},
+        {0,1}
+    };
     for (int i = 0; i < n; ++i) {
             scanf("%d", &mas[i]);
     }
     for (int i = 0; i < n; ++i) {
             printf("%d ", mas[i]);
     }
+    printf("\n");
+    
+    
     for (int i = 0; i < x; ++i) {
         for (int j=0; j<z; j++)
-            scanf("%d", &mat1[i][j]);
-    }
-    for (int i = 0; i < x; ++i) {
-        for (int j=0; j<z; j++)
-            scanf("%d", &mat2[i][j]);
-    }
-    for (int i = 0; i < x; ++i) {
-        for (int j=0; j<z; j++)
-            matx[i][j]=mat1[i][j]*mat2[i][j];
+        matx[i][j]=mat1[i][0]*mat2[0][j]+mat1[i][1]*mat2[1][j];
     }
     for (int i = 0; i < x; ++i) {
         for (int j=0; j<z; j++)
