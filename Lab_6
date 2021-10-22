@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    float* m = (float *) malloc(4);
+    for (int i = 0; i <4; ++i)
+    {
+        scanf("%f", &m[i]);
+    }
+    for (int i = 0; i <4; ++i)
+    {
+        printf("%f\t", m[i]);
+    }
+    free(m);
+    return 0;
+}
