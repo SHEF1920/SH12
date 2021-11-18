@@ -1,0 +1,53 @@
+#include <conio.h>
+#include <stdio.h>
+#include <math.h>
+
+enum Organisation
+{
+    ZAO,
+    OOO,
+    IP,
+    ODO,
+    OP,
+};
+
+struct Segment_straight
+{
+    int x1;
+    int x2;
+};
+
+struct ADSL
+{
+    unsigned int DSL : 1;
+	unsigned int PPP : 1;
+	unsigned int Link : 1;
+};
+
+union A_un
+{
+	struct ADSL b;
+	short i;
+};
+
+int main()
+{
+    
+    enum Organisation org;
+    org=OOO;
+    printf("%d\n", org);
+    
+    int znach=0;
+    struct Segment_straight S;
+    S.x1=15;
+    S.x2=28;
+    znach=abs(S.x1-S.x2);
+    printf("%d\n", znach);
+    
+    union A_un t;
+	  scanf("%x", &t.i);
+	  printf("%d\n", t.b.DSL);
+	  printf("%d\n", t.b.PPP);
+	  printf("%d\n", t.b.Link);
+    return 0;
+}
