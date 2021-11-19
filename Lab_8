@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+  char *str1 = "я";
+  char *str2 = "апе";
+  int ret;
+
+  ret = strncmp(str1, str2, 4);
+  printf("%d", ret);
+  if(ret > 0)
+  {
+    printf("str1 длиннее");
+  }
+  else if(ret < 0)
+  {
+    printf("str2 длиннее");
+  }
+  else
+  {
+    printf("Длины строк равны");
+  }
+    return 0;
+}
