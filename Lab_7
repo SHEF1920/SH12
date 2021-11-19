@@ -27,7 +27,7 @@ struct ADSL
 union A_un
 {
 	struct ADSL b;
-	short i;
+	unsigned i;
 };
 
 int main()
