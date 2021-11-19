@@ -1,25 +1,43 @@
-#include <stdio.h>
-#include <string.h>
+#include <stdio.h>  
+#include <string.h> 
+int main ()
+{    
+   char str1[1024];
+   char str2[1024];
+   scanf("%s", str1);
+   scanf("%s", str2);
+  
+    //3
+   if (strcmp (str1, str2)==0)
+      printf ("%s\n", "Строки идентичны");
+   else
+      printf ("%s\n","Строки отличаются");
+     
+    //6 
+    strncpy(str2, str1, 2);
+    //printf("%s\n", str2);
+    
+    //9
+    printf("%s\n",strrchr(str1,'a'));
+    
+    //10
+    char *istr;
+   istr = strstr (str1,str2);
+   if ( istr == NULL)
+      printf ("Строка не найдена\n");
+      
+      printf("13 - 13\n");
 
-int main()
-{
-  char *str1 = "я";
-  char *str2 = "апе";
-  int ret;
+    //13
+	char sym[5];
+	char* temp;
+	scanf(" %c", sym);
 
-  ret = strncmp(str1, str2, 4);
-  printf("%d", ret);
-  if(ret > 0)
-  {
-    printf("str1 длиннее");
-  }
-  else if(ret < 0)
-  {
-    printf("str2 длиннее");
-  }
-  else
-  {
-    printf("Длины строк равны");
-  }
-    return 0;
+	temp = strtok(str1, sym);
+
+	while (temp != NULL) 
+	{
+		printf("%s\n", temp);
+		temp = strtok(NULL,sym);
+	}
 }
