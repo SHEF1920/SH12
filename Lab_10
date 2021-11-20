@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int razryad_mas(int num)
+{
+    int rmas[1000];
+    int kol_el=0;
+    for(int i=0; num>0; i++)
+    {
+        rmas[i]=num%10;
+        num=num/10;
+        kol_el++;
+    }
+    //for(int i=0; i<kol_el; i++)
+        //printf("%d", rmas[i]);
+    for(int i=kol_el-1; i>=0; i--)
+        printf("%d", rmas[i]);
+    printf("\n");
+}
+
+int sum=0;
+int rekurs_sum(int num)
+{
+    sum+=num%10;
+    num=num/10;
+    if (num<=0)
+    {
+        printf("%d", sum);
+        return 0;
+    }
+        
+    rekurs_sum(num);
+}
+
+int main()
+{
+    //task 3
+    razryad_mas(5773);
+    
+    //task 4
+    rekurs_sum(5773);
+    return 0;
+}
