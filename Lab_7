@@ -19,7 +19,7 @@ struct Segment_straight
 
 struct ADSL
 {
-    unsigned int DSL : 1;
+        unsigned int DSL : 1;
 	unsigned int PPP : 1;
 	unsigned int Link : 1;
 };
