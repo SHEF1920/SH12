@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+int main()
+{
+    //task 3
+    int n=0;
+    //scanf("%d", &n);
+    if (n==0)
+        printf("ноль");
+    if (n==1)
+        printf("один");
+    if (n==2)
+        printf("два");
+    if (n==3)
+        printf("три");
+    if (n==4)
+        printf("четыре");
+    if (n==5)
+        printf("пять");
+    if (n==6)
+        printf("шесть");
+    if (n==7)
+        printf("семь");
+    if (n==8)
+        printf("восемь");
+    if (n==9)
+        printf("девять");
+       
+    //task 4
+    scanf("%d", &n);
+    int num=2;
+    printf("%d\n", num);
+    for (int i=3; i<=n; i+=2)
+    {
+        int count=0;
+        for(int j=2; j<i; j++)
+        {
+            if (i%j==0)
+                count++;
+        }
+        //printf("%d\n", count);
+        if (count==0)
+        {
+            printf("%d\n", i);
+        }
+            
+    }
+    return 0;
+}
