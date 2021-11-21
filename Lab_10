@@ -10,8 +10,6 @@ int razryad_mas(int num)
         num=num/10;
         kol_el++;
     }
-    //for(int i=0; i<kol_el; i++)
-        //printf("%d", rmas[i]);
     for(int i=kol_el-1; i>=0; i--)
         printf("%d", rmas[i]);
     printf("\n");
